@@ -59,7 +59,7 @@
     </style>
 </head>
 <body>
-    <h1>Will you be my Valentine? 💖</h1>
+    <h1 id="question">Will you be my Valentine? 💖</h1>
     <div class="buttons">
         <button id="yes" onclick="sayYes()">Yes</button>
         <button id="no" onmouseover="moveNo()">No</button>
@@ -67,6 +67,7 @@
 
     <script>
         function sayYes() {
+            document.getElementById("question").innerText = "I LOVE YOU";
             alert("Yay! I love you! ❤️");
             setInterval(createHearts, 300);
             setInterval(createImages, 500);
@@ -91,7 +92,7 @@
         }
 
         function createImages() {
-            let imageUrls = ["image1.jpg", "image2.jpg", "image3.jpg", "image4.jpg", "image5.jpg", "image6.jpg", "image7.jpg", "image8.jpg", "image9.jpg", "image10.jpg"];
+            let imageUrls = ["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg", "6.jpg", "7.jpg", "8.jpg", "9.jpg", "10.jpg"];
             let url = imageUrls[Math.floor(Math.random() * imageUrls.length)];
             let img = document.createElement("img");
             img.src = url;
